@@ -17,13 +17,13 @@
           "uuid" : "01D31EA7-4E4F-4623-9D43-1918250D9434",
           "name" : "mainView"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
 
         ],
-        "frame" : "{{964, 213}, {300, 34}}",
+        "frame" : "{{964, 213}, {390, 34}}",
         "class" : "Slider",
         "attributes" : {
           "flex" : "W",
@@ -44,13 +44,13 @@
         "frame" : "{{964, 182}, {132, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label1",
+          "font_size" : 18,
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "795ADDFE-FD5F-4405-BD0E-B6C73A765C66",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Start value of x:",
-          "font_size" : 18,
+          "name" : "label1",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -62,13 +62,13 @@
         "frame" : "{{964, 255}, {177, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label2",
+          "font_size" : 18,
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "02220F61-E24C-4B9D-B1B6-6C26379C9AAF",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Number of iterations:",
-          "font_size" : 18,
+          "name" : "label2",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -77,7 +77,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{964, 283}, {300, 34}}",
+        "frame" : "{{964, 283}, {390, 34}}",
         "class" : "Slider",
         "attributes" : {
           "flex" : "W",
@@ -95,16 +95,16 @@
         "nodes" : [
 
         ],
-        "frame" : "{{1149, 182}, {115, 32}}",
+        "frame" : "{{1239, 182}, {115, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "labelXstart",
+          "font_size" : 18,
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "B38C45E8-B9B5-4576-B168-9C3EEF0C7711",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Label",
-          "font_size" : 18,
+          "name" : "labelXstart",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -113,16 +113,16 @@
         "nodes" : [
 
         ],
-        "frame" : "{{1149, 255}, {115, 32}}",
+        "frame" : "{{1239, 255}, {115, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "labelMaxIter",
+          "font_size" : 18,
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "00A36111-1B8E-42A8-8F26-FAD885520653",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Label",
-          "font_size" : 18,
+          "name" : "labelMaxIter",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -134,13 +134,13 @@
         "frame" : "{{964, 6}, {198, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label3",
+          "font_size" : 20,
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "A9DBCFC0-4406-4722-88E3-9CEE226F1CE2",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Feigenbaum Explorer",
-          "font_size" : 20,
+          "name" : "label3",
           "font_name" : "<System-Bold>"
         },
         "selected" : false
@@ -190,9 +190,10 @@
         "frame" : "{{1093, 37}, {80, 27}}",
         "class" : "Button",
         "attributes" : {
-          "uuid" : "001D118A-28EC-4391-A37D-323F52ABD62F",
+          "action" : "buttonMetawopsTapped",
           "frame" : "{{595, 469}, {80, 32}}",
           "title" : "@metawops",
+          "uuid" : "001D118A-28EC-4391-A37D-323F52ABD62F",
           "class" : "Button",
           "name" : "button1",
           "font_size" : 14
@@ -203,7 +204,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{964, 140}, {300, 34}}",
+        "frame" : "{{964, 140}, {390, 34}}",
         "class" : "Slider",
         "attributes" : {
           "action" : "sliderLambdaChanged",
@@ -224,12 +225,100 @@
         "frame" : "{{964, 109}, {150, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label6",
+          "font_size" : 18,
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "1B4DF0E5-65F4-4176-AF2C-B2E018B1BD51",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Lambda:",
+          "name" : "label6",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1239, 109}, {115, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "99F09B39-5011-44B5-973E-938E4A4D2767",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Label",
+          "name" : "labelLambda",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1303, 343}, {51, 31}}",
+        "class" : "Switch",
+        "attributes" : {
+          "action" : "buttonShowRibbonTapped",
+          "frame" : "{{610, 470}, {51, 31}}",
+          "value" : false,
+          "class" : "Switch",
+          "name" : "switchShowRibbon",
+          "uuid" : "DC6399A2-78F2-4ADC-A1F0-1C2DBD379177"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 342}, {150, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "EBE202E2-24D4-416E-953C-01AC6A605FB6",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Show ribbon",
+          "name" : "label7",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 413}, {390, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "flex" : "W",
+          "continuous" : true,
+          "action" : "sliderRibbonLowerBoundChanged",
+          "frame" : "{{560, 468}, {200, 34}}",
+          "uuid" : "9D85C57D-D01D-4CCA-9C40-6437D933A828",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "sliderRibbonLowerBound"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 382}, {177, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label8",
+          "frame" : "{{585, 469}, {150, 32}}",
+          "uuid" : "BED321CB-8462-4998-A67F-87800C939EC3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Ribbon lower bound:",
           "font_size" : 18,
           "font_name" : "<System>"
         },
@@ -239,22 +328,22 @@
         "nodes" : [
 
         ],
-        "frame" : "{{1149, 109}, {115, 32}}",
+        "frame" : "{{1239, 382}, {115, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "labelLambda",
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "99F09B39-5011-44B5-973E-938E4A4D2767",
+          "name" : "labelRibbonLowerBound",
+          "frame" : "{{585, 469}, {150, 32}}",
+          "uuid" : "8187FF81-DF92-4137-ADBC-54605CDD5E3B",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Label",
           "font_size" : 18,
           "font_name" : "<System>"
         },
-        "selected" : false
+        "selected" : true
       }
     ],
-    "frame" : "{{0, 0}, {1270, 970}}",
+    "frame" : "{{0, 0}, {1360, 970}}",
     "class" : "View",
     "attributes" : {
       "enabled" : true,
