@@ -1,0 +1,268 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 6}, {950, 950}}",
+        "class" : "View",
+        "attributes" : {
+          "border_width" : 1,
+          "flex" : "",
+          "custom_class" : "feigenbaumView",
+          "frame" : "{{585, 435}, {100, 100}}",
+          "class" : "View",
+          "corner_radius" : 12,
+          "uuid" : "01D31EA7-4E4F-4623-9D43-1918250D9434",
+          "name" : "mainView"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 213}, {300, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "flex" : "W",
+          "continuous" : true,
+          "action" : "sliderXstartChanged",
+          "frame" : "{{535, 468}, {200, 34}}",
+          "uuid" : "1D20A00A-6786-49D3-AC21-84EB67C9788D",
+          "class" : "Slider",
+          "value" : 0.69999999999999996,
+          "name" : "sliderXstart"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 182}, {132, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "795ADDFE-FD5F-4405-BD0E-B6C73A765C66",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Start value of x:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 255}, {177, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label2",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "02220F61-E24C-4B9D-B1B6-6C26379C9AAF",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Number of iterations:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 283}, {300, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "flex" : "W",
+          "continuous" : true,
+          "action" : "sliderMaxIterChanged",
+          "frame" : "{{535, 468}, {200, 34}}",
+          "uuid" : "9A938B4A-2D42-4D64-9B13-FDABB46C00D0",
+          "class" : "Slider",
+          "value" : 1,
+          "name" : "sliderMaxIter"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1149, 182}, {115, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "labelXstart",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "B38C45E8-B9B5-4576-B168-9C3EEF0C7711",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Label",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1149, 255}, {115, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "labelMaxIter",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "00A36111-1B8E-42A8-8F26-FAD885520653",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Label",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 6}, {198, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label3",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "A9DBCFC0-4406-4722-88E3-9CEE226F1CE2",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Feigenbaum Explorer",
+          "font_size" : 20,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1170, 6}, {36, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label4",
+          "text_color" : "RGBA(0.502358,0.502358,0.502358,1.000000)",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "40C8AABB-27DB-457F-860D-D597EFE8DDEB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "v0.1",
+          "font_size" : 14,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 37}, {132, 27}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label5",
+          "text_color" : "RGBA(0.502358,0.502358,0.502358,1.000000)",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "EA48132F-7CED-42CA-B274-3675C0F0E33D",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "By Stefan Wolfrum,",
+          "font_size" : 14,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1093, 37}, {80, 27}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "001D118A-28EC-4391-A37D-323F52ABD62F",
+          "frame" : "{{595, 469}, {80, 32}}",
+          "title" : "@metawops",
+          "class" : "Button",
+          "name" : "button1",
+          "font_size" : 14
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 140}, {300, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "sliderLambdaChanged",
+          "flex" : "W",
+          "continuous" : true,
+          "frame" : "{{535, 468}, {200, 34}}",
+          "uuid" : "205AB33E-72A7-47AC-98EB-2F2031D0CB4B",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "sliderLambda"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{964, 109}, {150, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label6",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "1B4DF0E5-65F4-4176-AF2C-B2E018B1BD51",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Lambda:",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{1149, 109}, {115, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "labelLambda",
+          "frame" : "{{560, 469}, {150, 32}}",
+          "uuid" : "99F09B39-5011-44B5-973E-938E4A4D2767",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Label",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {1270, 970}}",
+    "class" : "View",
+    "attributes" : {
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
