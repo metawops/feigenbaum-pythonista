@@ -10,6 +10,7 @@
 
 import ui
 import math
+import webbrowser
 
 class feigenbaumView (ui.View):
 
@@ -24,7 +25,7 @@ class feigenbaumView (ui.View):
 		self.drawFunction = True
 		self.functionColor = '#f70'
 		self.drawSpiderweb = True
-		self.spiderwebColor = '#00f'
+		self.spiderwebColor = '#a7c6ff'
 		self.drawYeX = True # Winkelhalbierende / Y=X
 		self.YeXcolor = '#35ff46'
 		self.maxLam = 4.0
@@ -32,12 +33,20 @@ class feigenbaumView (ui.View):
 		self.maxIter = 10
 		self.maxMaxIter = 100
 		self.xStart = 0.7
+		self.drawRibbon = False
+		self.ribbonLowerBound = 0
+		self.paddingTopInitial = 10
+		self.paddingTopRibbon = 80
+		self.paddingTop = self.paddingTopInitial
+		self.paddingBottom = 10
+		self.paddingLeft = 10
+		self.paddingRight = 10
 
 	def did_load(self):
 		# This will be called when a view has been fully loaded from a UI file.
 		self.maxx = self.bounds[2]
 		self.maxy = self.bounds[3]
-		self.background_color = '#d0d0d0'
+		self.background_color = '#404040'
 							
 	def draw(self):
 		# This will be called whenever the view's content needs to be drawn.
@@ -49,6 +58,7 @@ class feigenbaumView (ui.View):
 		self.functionPath = ui.Path()
 		self.spiderwebPath = ui.Path()
 		self.YeXpath = ui.Path()
+		self.ribbonPath = ui.Path()
 				
 		(self.cx, self.cy) = self.bounds.center()
 		#print(self.cx, ", ", self.cy)
@@ -93,28 +103,40 @@ class feigenbaumView (ui.View):
 			self.functionPath.stroke()
 			
 		if (self.drawSpiderweb):
-			ui.set_color(self.spiderwebColor)
 			self.spiderwebPath.line_width = 1.0
 			x = self.xStart
 			iter = 0
 			y = self.lam * x * (1-x)
+			ui.set_color(self.spiderwebColor)		
 			self.spiderwebPath.move_to(self.mapx(x), self.mapy(0))
 			self.spiderwebPath.line_to(self.mapx(x), self.mapy(y))
+			if (self.drawRibbon and (iter >= self.ribbonLowerBound)):
+				#print(self.mapx(x), ", ", self.mapy(1.0))
+				ui.set_color(self.spiderwebColor)
+				self.ribbonPath.move_to(self.mapx(x), self.mapy(1.02))
+				self.ribbonPath.line_to(self.mapx(x), self.mapy(1.06))
 			while (iter < self.maxIter):
 				x = y
+				ui.set_color(self.spiderwebColor)
 				self.spiderwebPath.line_to(self.mapx(x), self.mapy(y))
 				y = self.lam * x * (1-x)
 				self.spiderwebPath.line_to(self.mapx(x), self.mapy(y))
+				if (self.drawRibbon and (iter >= self.ribbonLowerBound)):
+					#print(self.mapx(x), ", ", self.mapy(1.0))
+					ui.set_color(self.spiderwebColor)
+					self.ribbonPath.move_to(self.mapx(x), self.mapy(1.02))
+					self.ribbonPath.line_to(self.mapx(x), self.mapy(1.06))
 				iter += 1
 			self.spiderwebPath.stroke()
+			self.ribbonPath.stroke()
 			
 	def mapx(self, x):
-		return x * (self.maxx-20) + 10
+		return x * (self.maxx - (self.paddingLeft+self.paddingRight)) + self.paddingLeft
 		
 	def mapy(self, y):
-		return self.maxy - (y * (self.maxy-20) + 10)
+		return self.maxy - (y * (self.maxy - (self.paddingTop+self.paddingBottom)) + self.paddingBottom)
 	
-	
+# Sliders handling
 def sliderLambdaChanged(sender):
 	mainView = v['mainView']
 	mainView.lam = sender.value * mainView.maxLam
@@ -132,7 +154,28 @@ def sliderMaxIterChanged(sender):
 	mainView.maxIter = sender.value * mainView.maxMaxIter
 	v['labelMaxIter'].text = "{:.0f}".format(mainView.maxIter)
 	mainView.set_needs_display()
-		
+
+def sliderRibbonLowerBoundChanged(sender):
+	mainView = v['mainView']
+	mainView.ribbonLowerBound = sender.value * mainView.maxMaxIter
+	v['labelRibbonLowerBound'].text = "{:.0f}".format(mainView.ribbonLowerBound)
+	mainView.set_needs_display()	
+	
+# Button handling
+def buttonMetawopsTapped(sender):
+	webbrowser.open("safari-http://twitter.com/metawops")
+	
+def buttonShowRibbonTapped(sender):
+	mainView = v['mainView']
+	if (sender.value):
+		mainView.paddingTop = mainView.paddingTopRibbon
+		mainView.drawRibbon = True
+	else:
+		mainView.paddingTop = mainView.paddingTopInitial
+		mainView.drawRibbon = False
+	mainView.set_needs_display()
+	
+	
 v = ui.load_view('feigenbaumview.pyui')
 mainView = v['mainView']
 v['sliderLambda'].value = mainView.lam / mainView.maxLam
@@ -141,5 +184,6 @@ v['sliderXstart'].value = mainView.xStart
 v['labelXstart'].text = "{:.6f}".format(mainView.xStart)
 v['sliderMaxIter'].value = mainView.maxIter / mainView.maxMaxIter
 v['labelMaxIter'].text = "{:.0f}".format(mainView.maxIter)
+v['sliderRibbonLowerBound'].value = mainView.ribbonLowerBound / mainView.maxMaxIter
+v['labelRibbonLowerBound'].text = "{:.0f}".format(mainView.ribbonLowerBound)
 v.present('full_screen')
-
