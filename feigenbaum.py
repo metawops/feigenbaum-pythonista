@@ -1,11 +1,10 @@
 #--------------------------------------------------------------------------
 # Title      : Feigenbaum
 # Author     : Stefan Wolfrum (@metawops)
-# Date       : January 2018
-# Last Update: January 2018
+# Date       : 20.01.2018
+# Last Update: 21.01.2018
 # Version    : 0.1
-# License    : Creative Commons Attribution-ShareAlike 3.0 Germany License.
-# LicenseLink: http://creativecommons.org/licenses/by-sa/3.0/de/
+# License    : MIT License
 #--------------------------------------------------------------------------
 
 import ui
