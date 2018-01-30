@@ -23,124 +23,16 @@
         "nodes" : [
 
         ],
-        "frame" : "{{964, 213}, {390, 34}}",
-        "class" : "Slider",
-        "attributes" : {
-          "flex" : "W",
-          "continuous" : true,
-          "action" : "sliderXstartChanged",
-          "frame" : "{{535, 468}, {200, 34}}",
-          "uuid" : "1D20A00A-6786-49D3-AC21-84EB67C9788D",
-          "class" : "Slider",
-          "value" : 0.69999999999999996,
-          "name" : "sliderXstart"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{964, 182}, {132, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "795ADDFE-FD5F-4405-BD0E-B6C73A765C66",
-          "class" : "Label",
-          "alignment" : "left",
-          "text" : "Start value of x:",
-          "name" : "label1",
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{964, 255}, {177, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "02220F61-E24C-4B9D-B1B6-6C26379C9AAF",
-          "class" : "Label",
-          "alignment" : "left",
-          "text" : "Number of iterations:",
-          "name" : "label2",
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{964, 283}, {390, 34}}",
-        "class" : "Slider",
-        "attributes" : {
-          "flex" : "W",
-          "continuous" : true,
-          "action" : "sliderMaxIterChanged",
-          "frame" : "{{535, 468}, {200, 34}}",
-          "uuid" : "9A938B4A-2D42-4D64-9B13-FDABB46C00D0",
-          "class" : "Slider",
-          "value" : 1,
-          "name" : "sliderMaxIter"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{1239, 182}, {115, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "B38C45E8-B9B5-4576-B168-9C3EEF0C7711",
-          "class" : "Label",
-          "alignment" : "right",
-          "text" : "Label",
-          "name" : "labelXstart",
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{1239, 255}, {115, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "00A36111-1B8E-42A8-8F26-FAD885520653",
-          "class" : "Label",
-          "alignment" : "right",
-          "text" : "Label",
-          "name" : "labelMaxIter",
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
         "frame" : "{{964, 6}, {198, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 20,
+          "name" : "label3",
           "frame" : "{{560, 469}, {150, 32}}",
           "uuid" : "A9DBCFC0-4406-4722-88E3-9CEE226F1CE2",
           "class" : "Label",
           "alignment" : "left",
           "text" : "Feigenbaum Explorer",
-          "name" : "label3",
+          "font_size" : 20,
           "font_name" : "<System-Bold>"
         },
         "selected" : false
@@ -158,11 +50,11 @@
           "uuid" : "40C8AABB-27DB-457F-860D-D597EFE8DDEB",
           "class" : "Label",
           "alignment" : "left",
-          "text" : "v0.1",
+          "text" : "v0.2",
           "font_size" : 14,
           "font_name" : "<System>"
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -204,17 +96,281 @@
         "nodes" : [
 
         ],
-        "frame" : "{{964, 140}, {390, 34}}",
-        "class" : "Slider",
+        "frame" : "{{964, 72}, {390, 29}}",
+        "class" : "SegmentedControl",
         "attributes" : {
-          "action" : "sliderLambdaChanged",
-          "flex" : "W",
-          "continuous" : true,
-          "frame" : "{{535, 468}, {200, 34}}",
-          "uuid" : "205AB33E-72A7-47AC-98EB-2F2031D0CB4B",
-          "class" : "Slider",
-          "value" : 0.5,
-          "name" : "sliderLambda"
+          "action" : "segmentedControlTapped",
+          "flex" : "LR",
+          "segments" : "Cobweb|Feigenbaum",
+          "frame" : "{{620, 471}, {120, 29}}",
+          "uuid" : "AB55FD8C-9167-41C0-9786-E0FC9BC3FF94",
+          "class" : "SegmentedControl",
+          "name" : "segmentedcontrol1"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 39}, {378, 34}}",
+            "class" : "Slider",
+            "attributes" : {
+              "flex" : "W",
+              "continuous" : true,
+              "action" : "sliderLambdaChanged",
+              "frame" : "{{-1, 75}, {200, 34}}",
+              "uuid" : "E1630F3F-4709-4C90-9257-1267F975BCDB",
+              "class" : "Slider",
+              "value" : 0.5,
+              "name" : "sliderLambda"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 6}, {74, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "name" : "label1",
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "07D0EAE7-E484-4AF1-9ECD-7D0C5E4AA0F5",
+              "class" : "Label",
+              "alignment" : "left",
+              "text" : "Lambda:",
+              "font_size" : 18,
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{304, 6}, {80, 32}}",
+            "class" : "TextField",
+            "attributes" : {
+              "name" : "textfieldLambda",
+              "frame" : "{{95, 169}, {200, 32}}",
+              "spellchecking_type" : "default",
+              "class" : "TextField",
+              "uuid" : "B2F776D4-CB88-46CA-B61A-796DACB665EB",
+              "alignment" : "left",
+              "autocorrection_type" : "default",
+              "font_size" : 17,
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 81}, {133, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "name" : "labelXstart",
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "CDFB48EE-6B72-4DF5-B52D-220E4C0F9846",
+              "class" : "Label",
+              "alignment" : "left",
+              "text" : "Start value of x:",
+              "font_size" : 18,
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 113}, {378, 34}}",
+            "class" : "Slider",
+            "attributes" : {
+              "flex" : "W",
+              "continuous" : true,
+              "action" : "sliderXstartChanged",
+              "frame" : "{{95, 168}, {200, 34}}",
+              "uuid" : "89C4F4DE-3AA7-44DF-950D-00D364460502",
+              "class" : "Slider",
+              "value" : 0.5,
+              "name" : "sliderXstart"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{284, 81}, {100, 32}}",
+            "class" : "TextField",
+            "attributes" : {
+              "name" : "textfieldXstart",
+              "frame" : "{{95, 169}, {200, 32}}",
+              "spellchecking_type" : "default",
+              "class" : "TextField",
+              "uuid" : "91F13C3C-6136-4422-8740-0ADB4F7C13D6",
+              "alignment" : "left",
+              "autocorrection_type" : "default",
+              "font_size" : 17,
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 155}, {177, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "name" : "label2",
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "78FB2C48-7A80-4008-843E-F13AC03E6354",
+              "class" : "Label",
+              "alignment" : "left",
+              "text" : "Number of iterations:",
+              "font_size" : 18,
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{304, 155}, {80, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "name" : "labelMaxIter",
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "A9CE2A5D-3F2D-483A-BEE0-C102072FBE22",
+              "class" : "Label",
+              "alignment" : "right",
+              "text" : "Label",
+              "font_size" : 18,
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 188}, {378, 34}}",
+            "class" : "Slider",
+            "attributes" : {
+              "action" : "sliderMaxIterChanged",
+              "flex" : "W",
+              "continuous" : true,
+              "frame" : "{{95, 168}, {200, 34}}",
+              "uuid" : "E810D65C-D98A-4FB5-A919-008E2543D452",
+              "class" : "Slider",
+              "value" : 0.5,
+              "name" : "sliderMaxIter"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 230}, {270, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "font_size" : 18,
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "7C1EB28C-F33E-49F4-AB7E-0BB94BF6FAD0",
+              "class" : "Label",
+              "alignment" : "left",
+              "text" : "Show ribbon:",
+              "name" : "label3",
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{333, 230}, {51, 31}}",
+            "class" : "Switch",
+            "attributes" : {
+              "action" : "buttonShowRibbonTapped",
+              "frame" : "{{170, 170}, {51, 31}}",
+              "value" : false,
+              "class" : "Switch",
+              "name" : "switchShowRibbon",
+              "uuid" : "3C228A21-2C78-4FAC-94D9-DB40D85E8FB1"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 304}, {378, 34}}",
+            "class" : "Slider",
+            "attributes" : {
+              "flex" : "W",
+              "continuous" : true,
+              "action" : "sliderRibbonLowerBoundChanged",
+              "frame" : "{{95, 168}, {200, 34}}",
+              "uuid" : "1B1342E8-4B90-4394-BD89-1E74A0913F5A",
+              "class" : "Slider",
+              "value" : 0.5,
+              "name" : "sliderRibbonLowerBound"
+            },
+            "selected" : true
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{6, 270}, {205, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "font_size" : 18,
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "1CE2B7CF-6225-432B-A456-5665420926B7",
+              "class" : "Label",
+              "alignment" : "left",
+              "text" : "Ribbon‘s lower bound:",
+              "name" : "label4",
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          },
+          {
+            "nodes" : [
+
+            ],
+            "frame" : "{{304, 270}, {80, 32}}",
+            "class" : "Label",
+            "attributes" : {
+              "font_size" : 18,
+              "frame" : "{{120, 169}, {150, 32}}",
+              "uuid" : "72F8DDAF-A9AE-471D-A20D-5936347DC38B",
+              "class" : "Label",
+              "alignment" : "right",
+              "text" : "Label",
+              "name" : "labelRibbonLowerBound",
+              "font_name" : "<System>"
+            },
+            "selected" : false
+          }
+        ],
+        "frame" : "{{964, 109}, {390, 370}}",
+        "class" : "View",
+        "attributes" : {
+          "frame" : "{{630, 435}, {100, 100}}",
+          "class" : "View",
+          "name" : "viewCobweb",
+          "uuid" : "F2072389-B502-4D01-B885-EFE5EFC42433"
         },
         "selected" : false
       },
@@ -222,125 +378,15 @@
         "nodes" : [
 
         ],
-        "frame" : "{{964, 109}, {150, 32}}",
-        "class" : "Label",
+        "frame" : "{{964, 505}, {390, 300}}",
+        "class" : "View",
         "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "1B4DF0E5-65F4-4176-AF2C-B2E018B1BD51",
-          "class" : "Label",
-          "alignment" : "left",
-          "text" : "Lambda:",
-          "name" : "label6",
-          "font_name" : "<System>"
+          "frame" : "{{630, 435}, {100, 100}}",
+          "class" : "View",
+          "name" : "viewFeigenbaum",
+          "uuid" : "DA3997E5-0DD3-4576-8C8E-78B981F9C74B"
         },
         "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{1239, 109}, {115, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "99F09B39-5011-44B5-973E-938E4A4D2767",
-          "class" : "Label",
-          "alignment" : "right",
-          "text" : "Label",
-          "name" : "labelLambda",
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{1303, 343}, {51, 31}}",
-        "class" : "Switch",
-        "attributes" : {
-          "action" : "buttonShowRibbonTapped",
-          "frame" : "{{610, 470}, {51, 31}}",
-          "value" : false,
-          "class" : "Switch",
-          "name" : "switchShowRibbon",
-          "uuid" : "DC6399A2-78F2-4ADC-A1F0-1C2DBD379177"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{964, 342}, {150, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "font_size" : 18,
-          "frame" : "{{560, 469}, {150, 32}}",
-          "uuid" : "EBE202E2-24D4-416E-953C-01AC6A605FB6",
-          "class" : "Label",
-          "alignment" : "left",
-          "text" : "Show ribbon",
-          "name" : "label7",
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{964, 413}, {390, 34}}",
-        "class" : "Slider",
-        "attributes" : {
-          "flex" : "W",
-          "continuous" : true,
-          "action" : "sliderRibbonLowerBoundChanged",
-          "frame" : "{{560, 468}, {200, 34}}",
-          "uuid" : "9D85C57D-D01D-4CCA-9C40-6437D933A828",
-          "class" : "Slider",
-          "value" : 0.5,
-          "name" : "sliderRibbonLowerBound"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{964, 382}, {177, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "name" : "label8",
-          "frame" : "{{585, 469}, {150, 32}}",
-          "uuid" : "BED321CB-8462-4998-A67F-87800C939EC3",
-          "class" : "Label",
-          "alignment" : "left",
-          "text" : "Ribbon lower bound:",
-          "font_size" : 18,
-          "font_name" : "<System>"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{1239, 382}, {115, 32}}",
-        "class" : "Label",
-        "attributes" : {
-          "name" : "labelRibbonLowerBound",
-          "frame" : "{{585, 469}, {150, 32}}",
-          "uuid" : "8187FF81-DF92-4137-ADBC-54605CDD5E3B",
-          "class" : "Label",
-          "alignment" : "right",
-          "text" : "Label",
-          "font_size" : 18,
-          "font_name" : "<System>"
-        },
-        "selected" : true
       }
     ],
     "frame" : "{{0, 0}, {1360, 970}}",
